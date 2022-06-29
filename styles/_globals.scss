@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+
+$mainColor: #247cff;
+$mainColorDark: #1a4ed2;
+$bgColor: white;
+$bgColorDark: #f1f6fb;
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@mixin justifyAndAlign($justify) {
+    align-items: center;
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin button($fill, $border, $type, $hoverColor) {
+    background-color: $fill;
+    border: 1px solid $border;
+    border-radius: 4px;
+    color: $type;
+    font-weight: bold;
+    padding: 16px 0;
+
+    transition: .2s;
+
+    &:hover {
+        background-color: $hoverColor;
+        border: $hoverColor;
+        transform: translateY(-2px);
+    }
+}

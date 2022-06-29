@@ -1,0 +1,74 @@
+header {
+    background-color: $bgColor;
+    border-bottom: 1px solid lightgray;
+    padding: 24px;
+    position: relative;
+    z-index: 2;
+
+    @include justifyAndAlign(space-between);
+
+    .firstCont {
+        display: flex;
+    }
+
+    .secCont {
+
+        .openButton {
+            background-color: black;
+            height: 2px;
+            margin: 10px 0;
+            position: relative;
+            width: 34px;
+
+            &:hover {
+
+                &::before,
+                &::after {
+                    top: 0;
+                }
+            }
+
+            &::before,
+            &::after {
+                background-color: black;
+                content: '';
+                height: 2px;
+                position: absolute;
+                top: -10px;
+                width: 100%;
+
+                transition: .3s;
+            }
+
+            &::after {
+                top: 10px;
+                width: 100%;
+            }
+        }
+
+        .navBar {
+            display: none;
+        }
+    }
+}
+
+.phoneNavBar {
+    background-color: $bgColor;
+    position: absolute;
+    //top: 0;
+    width: 100%;
+
+    z-index: 1;
+
+    ul {
+        li {
+            padding: 16px 24px;
+        }
+    }
+
+    button {
+        width: 100%;
+
+        @include button($mainColor, $mainColor, white, $mainColorDark);
+    }
+}
