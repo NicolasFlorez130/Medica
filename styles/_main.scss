@@ -1,0 +1,635 @@
+main {
+
+    border-top: 1px solid lightgray;
+
+    section {
+        padding: 24px;
+
+        h3,
+        h4 {
+            font-size: 1em;
+            font-weight: 500;
+
+            @include medium {
+                font-size: 1.2em;
+            }
+        }
+
+        @include large {
+
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+    }
+
+    .welcome {
+        .firstCont {
+
+            div {
+                &>* {
+                    margin: 10px 0;
+                }
+
+                h3 {
+                    color: $mainColor;
+
+                    @include tailedTitle;
+                }
+
+                h1 {
+                    font-size: 2.3em;
+                    line-height: 1em;
+
+                    @include large {
+                        font-size: 3em;
+                    }
+                }
+
+                p {
+                    color: $lightText;
+                }
+
+                button {
+                    margin-bottom: 20px;
+
+                    @include button($mainColor, $mainColor, white, $mainColorDark);
+                }
+            }
+        }
+
+        .secCont {
+            background-image: url('../assets/images/backgrounds/bg-1.jpg');
+            background-size: cover;
+            height: var(--bgHeight);
+            width: 100%;
+
+            @include small {
+                background-position: top;
+            }
+        }
+
+        .thirdCont {
+            .subCont {
+                margin: auto;
+                width: min-content;
+
+                @include medium {
+                    width: 100%;
+
+                    @include justifyAndAlign(space-between);
+                    align-items: flex-start;
+                    flex-wrap: nowrap;
+                }
+
+                @include large {
+                    max-width: 1000px;
+                }
+            }
+
+
+
+            .cont {
+                margin: 1em 0;
+                display: flex;
+                align-items: start;
+
+                img {
+                    margin: 16px;
+                    margin-left: 0;
+                }
+
+                ul {
+                    li {
+                        color: $lightText;
+
+                        h4 {
+                            color: black;
+                            font-weight: 800;
+                            margin: (1em / 2) 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include large {
+
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            position: relative;
+
+            .firstCont,
+            .secCont {
+                width: 50%;
+            }
+
+            .firstCont {
+                @include justifyAndAlign(end);
+
+                div {
+                    padding: 0 91px;
+                    max-width: 550px;
+                }
+            }
+
+            .thirdCont {
+                background-color: white;
+                bottom: 0 - 129px;
+                border-radius: 8px;
+                box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+                padding: 48px 85px;
+                position: absolute;
+                width: 75%;
+            }
+        }
+    }
+
+    .darkBgSection {
+        background-color: $bgColorDark;
+        padding: 58px 0;
+
+        @include large {
+            padding: (58px + 105) 0 0;
+        }
+    }
+
+    .aboutUs,
+    .whyUs {
+        padding-top: 20px;
+
+        .content {
+            h3 {
+                color: $lightText;
+
+                @include tailedTitle();
+            }
+
+            p {
+                color: $lightText;
+                margin: 10px 0 0;
+            }
+
+            button {
+                margin: 30px 0;
+                @include button($mainColor, $mainColor, white, $mainColorDark);
+            }
+        }
+
+        .image {
+            background-image: url(../assets/images/backgrounds/bg-2.jpg);
+            background-position: center;
+            background-size: cover;
+            height: var(--bgHeight);
+            width: 100%;
+        }
+
+        @include large {
+            display: flex;
+            padding: 0;
+
+            .content,
+            .image {
+                width: 50%;
+            }
+
+            .content {
+                box-sizing: border-box;
+                padding: 0 91px;
+
+                div {
+                    max-width: 550px;
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+        @include large {
+            .content {
+                @include justifyAndAlign(end);
+            }
+        }
+    }
+
+    .whyUs {
+        .image {
+            background-image: url(../assets/images/backgrounds/bg-3.jpg);
+            order: -1;
+        }
+
+        @include large {
+            .content {
+                @include justifyAndAlign(start);
+            }
+        }
+    }
+
+    .services,
+    .news {
+        margin: 50px 0;
+
+        @include justifyAndAlign(center);
+
+        p {
+            color: $lightText;
+        }
+
+        button {
+            @include button($mainColor, $mainColor, white, $mainColorDark);
+        }
+
+        .firstCont {
+            &>* {
+                text-align: center;
+            }
+
+            h4 {
+                color: $lightText;
+            }
+
+            h2 {
+                padding: 5px 0;
+            }
+
+            p {
+                margin: auto;
+                padding: 0 12px;
+                width: 70%;
+            }
+        }
+
+        .secCont {
+            .card {
+                border-radius: 8px;
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+                margin: 24px 0;
+                padding: 36px 18px;
+
+                transition: .3s;
+
+                &:hover {
+                    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-6px);
+                }
+
+                h3 {
+                    font-weight: 700;
+                    margin: 8px 0
+                }
+
+                button {
+                    position: relative;
+                    margin-top: 36px;
+                    width: 100%;
+
+                    @include button(white, $mainColor, $mainColor, $mainColor);
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        @include large {
+            margin: 140px 0;
+            flex-direction: column;
+
+            .firstCont {
+
+                p {
+                    width: 480px;
+                }
+            }
+
+            .secCont {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                max-width: 1262px;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 24px 12px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .services {
+        .secCont {
+
+            .card {
+
+                @include medium {
+                    margin-top: (24px + 48px);
+                    padding-top: (26px + 48px);
+                    position: relative;
+                }
+
+                img {
+                    @include medium {
+                        position: absolute;
+                        top: -45px;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .booking {
+        background-color: $mainColor;
+        color: white;
+        font-weight: 500;
+        padding: 74px 24px;
+
+        .firstCont {
+            h2 {
+                margin: 12px 0;
+            }
+
+            button {
+                width: 100%;
+                margin: 24px 0 12px;
+            }
+
+            .white {
+                @include button(white, white, $mainColor, white);
+            }
+
+            .blue {
+                @include button($mainColor, white, white, $mainColor);
+                @include justifyAndAlign(center);
+
+                img {
+                    margin-right: 4px;
+                }
+            }
+        }
+
+        .image {
+            background-image: url(../assets/images/backgrounds/bg-4.jpg);
+            background-position: center;
+            background-size: cover;
+            height: var(--bgHeight);
+            margin-top: 36px;
+            width: 100%;
+        }
+
+        @include large {
+            display: flex;
+
+            padding: 0;
+
+            .firstCont,
+            .image {
+                margin: 0;
+                width: 50%;
+            }
+
+            .firstCont {
+                @include justifyAndAlign(end);
+
+                &>div {
+                    padding: 91px;
+                    width: 472px;
+
+                    div {
+                        @include justifyAndAlign(flex-start);
+
+                        button {
+                            width: max-content;
+                        }
+
+                        .white {
+                            margin-right: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .news {
+        .secCont {
+            .card {
+                font-weight: 500;
+                padding: 0;
+
+                &:hover {
+                    a {
+                        padding-right: 6px;
+                    }
+                }
+
+                .header {
+                    border-radius: 8px 8px 0 0;
+                    width: 100%;
+                }
+
+                .subCont {
+                    margin: 24px;
+
+                    .readMore {
+                        color: $mainColor;
+                        font-weight: 800;
+                        padding: 24px 0;
+
+                        @include justifyAndAlign(start);
+
+                        a {
+                            margin-right: 8px;
+
+                            transition: .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        padding: 0;
+
+        &>div {
+            padding: 74px 24px;
+        }
+
+        .firstCont {
+
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+
+            h3 {
+                font-size: 28px;
+                font-weight: 800;
+                margin-bottom: 28px;
+            }
+
+            form {
+
+                label {
+                    font-weight: 800;
+                }
+
+                input,
+                textarea {
+                    border: 1px solid lightgrey;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    font-weight: 800;
+                    margin: 16px 0 24px 0;
+                    padding: 16px;
+                    resize: none;
+                    width: 100%;
+
+                    transition: .2s;
+
+                    &:hover {
+                        border: 1px solid $mainColor;
+                    }
+
+                    &:focus,
+                    &:active {
+                        border-left: 4px solid $mainColor;
+                    }
+
+                    &[type=submit] {
+                        margin-top: 0;
+                        width: auto;
+
+                        @include button($mainColor, $mainColor, white, $mainColorDark);
+                    }
+                }
+            }
+        }
+
+        .secCont {
+            padding: 0;
+
+            &>div {
+
+                background-color: $bgColorBlue;
+                box-sizing: border-box;
+                color: white;
+                padding: 74px 24px;
+
+                h4 {
+                    font-weight: 800;
+                }
+
+                .blue {
+                    @include button($mainColor, $mainColor, white, $mainColorDark);
+                }
+
+                .white {
+                    @include button($bgColorBlue, white, white, $bgColorBlue);
+                }
+
+                .blue,
+                .white {
+                    font-weight: 500;
+                }
+
+                .buttons {
+
+                    border-bottom: .5px solid $lightText;
+                    margin-bottom: 36px;
+                    padding-bottom: 24px;
+
+
+                    button {
+                        margin: 12px 0;
+                        width: 100%;
+
+                        img {
+                            display: block;
+                            padding-bottom: 8px;
+                            margin: auto;
+                        }
+
+                        @include small {
+                            padding: .5em;
+                            width: 280px;
+
+                            @include justifyAndAlign(center);
+
+                            img {
+                                height: 1rem;
+                                margin: 0;
+                                padding: 4px 8px;
+                                width: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                .places {
+
+                    @include small {
+                        max-width: 500px;
+                    }
+
+                    h4 {
+                        margin-bottom: 16px;
+                        width: 100%;
+                    }
+
+                    .place {
+                        .title {
+                            color: $lightBlue;
+                        }
+
+                        @include small {
+                            &:nth-child(3) {
+                                margin-right: 56px;
+                            }
+
+                        }
+                    }
+
+                    @include small {
+                        @include justifyAndAlign(space-between);
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+
+        @include large {
+            display: flex;
+            flex-wrap: nowrap;
+
+            .firstCont {
+                box-sizing: border-box;
+                padding: 120px;
+                width: 55%;
+            }
+
+            .secCont {
+                position: relative;
+                width: 45%;
+
+                &>div {
+                    bottom: 0;
+                    padding: 120px 48px;
+                    position: absolute;
+                    width: 100%;
+
+                    .buttons {
+
+                        button {
+                            padding: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

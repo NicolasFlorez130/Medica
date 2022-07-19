@@ -1,17 +1,54 @@
 header {
     background-color: $bgColor;
-    border-bottom: 1px solid lightgray;
     padding: 24px;
     position: relative;
+
+    max-width: 1262px;
     z-index: 2;
 
+
     @include justifyAndAlign(space-between);
+
+    @include large {
+        margin: auto;
+    }
+
+    .top {
+        display: none;
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        width: 100%;
+
+        &>* {
+            @include justifyAndAlign(space-between);
+
+            &:nth-child(1) {
+                img {
+                    margin-right: 8px;
+                }
+            }
+
+            &>* {
+
+                &:nth-child(2) {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        @include medium {
+            @include justifyAndAlign(space-between);
+        }
+
+    }
 
     .firstCont {
         display: flex;
     }
 
     .secCont {
+        cursor: pointer;
 
         .openButton {
             background-color: black;
@@ -19,14 +56,6 @@ header {
             margin: 10px 0;
             position: relative;
             width: 34px;
-
-            &:hover {
-
-                &::before,
-                &::after {
-                    top: 0;
-                }
-            }
 
             &::before,
             &::after {
@@ -36,18 +65,65 @@ header {
                 position: absolute;
                 top: -10px;
                 width: 100%;
-
-                transition: .3s;
             }
 
             &::after {
                 top: 10px;
                 width: 100%;
             }
+
+            @include large {
+                display: none;
+            }
         }
 
         .navBar {
             display: none;
+
+            @include large {
+                display: inline;
+
+                ul {
+                    @include justifyAndAlign(space-between);
+
+                    li {
+                        margin: 0 24px;
+                    }
+
+                    button {
+                        margin: 0 0 0 24px;
+
+                        @include button($mainColor, $mainColor, white, $mainColorDark);
+                    }
+                }
+            }
+        }
+    }
+
+    .buttonClicked1 {
+
+        animation: openButton .5s forwards;
+
+
+        &::after {
+            animation: openButtonAfter .5s forwards;
+        }
+
+        &::before {
+            animation: openButtonBefore .5s forwards;
+        }
+    }
+
+    .buttonClicked2 {
+
+        animation: closeButton .5s forwards;
+
+        &::after {
+            animation: closeButtonAfter .5s forwards;
+        }
+
+        &::before {
+            animation: closeButtonBefore .5s forwards;
         }
     }
 }
@@ -55,9 +131,11 @@ header {
 .phoneNavBar {
     background-color: $bgColor;
     position: absolute;
-    //top: 0;
+    top: -360px;
     width: 100%;
 
+    transition: .5s;
+    transition-timing-function: ease-in-out;
     z-index: 1;
 
     ul {
@@ -70,5 +148,17 @@ header {
         width: 100%;
 
         @include button($mainColor, $mainColor, white, $mainColorDark);
+    }
+
+    @include large {
+        display: none;
+    }
+}
+
+.opened {
+    transform: translateY(360px + 90px - 1px);
+
+    @include medium {
+        transform: translateY(360px + 90px - 1px + 80px);
     }
 }

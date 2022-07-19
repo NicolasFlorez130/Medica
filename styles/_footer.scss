@@ -1,0 +1,149 @@
+footer {
+    padding: 32px 24px;
+
+    .top {
+
+        @include justifyAndAlign(center);
+
+        @include small {
+            justify-content: space-between;
+        }
+
+        &>img {
+            width: 130px;
+            margin: 0 calc(50% - 65px);
+
+            transition: .2s;
+
+            &:hover {
+                transform: scale(.9);
+            }
+
+            @include small {
+                margin: 0;
+            }
+        }
+
+        ul {
+            @include justifyAndAlign(space-between);
+
+            li {
+                margin: 8px 10px;
+            }
+        }
+
+        @include large {
+            padding-bottom: 44px;
+        }
+    }
+
+    .bot {
+
+        h5 {
+            color: black;
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin: 32px 0;
+
+            li {
+                color: $lightText;
+                margin: 4px 0;
+
+                @include justifyAndAlign(start);
+                flex-wrap: nowrap;
+
+                img {
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        div {
+            color: $lightText;
+
+            button {
+                @include button($mainColor, $mainColor, white, $mainColorDark);
+
+                margin: 24px 0;
+                width: 100%;
+
+                img {
+                    display: block;
+                    padding-bottom: 8px;
+                    margin: auto;
+                }
+
+                @include small {
+                    padding: 4px !important;
+
+                    @include justifyAndAlign(center);
+
+                    img {
+                        height: 1rem;
+                        margin: 0;
+                        padding: 4px 8px;
+                        width: 1rem;
+                    }
+                }
+            }
+        }
+
+        @include medium {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            ul,
+            &>div {
+                margin-top: 16px;
+                width: 40%;
+            }
+
+            ul {
+                &:nth-child(1) {
+                    order: 1;
+                }
+
+                &:nth-child(2) {
+                    order: 3;
+                }
+            }
+
+            div {
+                order: 2;
+            }
+        }
+
+        @include large {
+
+            ul,
+            &>div {
+                width: 30%;
+            }
+
+            div {
+                order: 3;
+            }
+        }
+    }
+
+    @include large {
+        padding: 86px 0;
+
+        @include justifyAndAlign(center);
+        flex-direction: column;
+
+        .top,
+        .bot {
+            padding: unset 120px;
+            width: 100%;
+
+            max-width: 1262px;
+        }
+    }
+}

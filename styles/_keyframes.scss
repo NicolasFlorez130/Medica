@@ -1,0 +1,74 @@
+@keyframes openButton {
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes openButtonAfter {
+    0% {}
+
+    50% {
+        top: 0;
+        transform: none;
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes openButtonBefore {
+    0% {}
+
+    50% {
+        top: 0;
+        transform: none;
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes closeButton {
+
+    0% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes closeButtonAfter {
+
+    0% {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        top: 0;
+        transform: none;
+    }
+
+    100% {}
+}
+
+@keyframes closeButtonBefore {
+
+    0% {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        top: 0;
+        transform: none;
+    }
+
+    100% {}
+}
