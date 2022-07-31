@@ -72,3 +72,93 @@
 
     100% {}
 }
+
+// Observer animations
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes topToMidAndAppear {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightToMidAndAppear {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes botToMidAndAppear {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes leftToMidAndAppear {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightToMidAndAppearBouncy {
+    0% {
+        transform: translateX(100px);
+    }
+
+    50%{
+        transform: translateX(-40px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes leftToMidAndAppearBouncy {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    50%{
+        transform: translateX(40px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

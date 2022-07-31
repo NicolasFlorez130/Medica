@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical</title>
+    <title>Medica</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/animations.js"></script>
+    <link href="assets/images/icons/tabIcon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="assets/images/icons/tabIcon.png" rel="apple-touch-icon">
 </head>
 
 <body>
@@ -57,19 +60,23 @@
     <main>
         <section class="welcome">
             <div class="firstCont">
-                <div>
+                <div class="animate">
                     <h3>HOSPITAL CENTER</h3>
                     <h1>Healthcare for Family's Health</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius error consequuntur dolorem
-                        molestias
-                        quisquam deleniti animi unde alias tenetur assumenda!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur ea ipsam earum ipsum
+                        dicta?</p>
                     <button>Book an Appointment</button>
                 </div>
             </div>
-            <div class="secCont">
+            <div class="aestheticElements animate">
+                <img style="order: 1;" src="assets/decorations/hero-2.svg">
+                <img src="assets/decorations/hero-1.svg">
+            </div>
+            <div class="secCont image">
+                <div class="imageCover lighter"></div>
             </div>
             <div class="thirdCont">
-                <div class="subCont">
+                <div class="subCont animate">
                     <span class="cont">
                         <img src="assets/images/icons/phoneFilled.svg" alt="">
                         <span class="text">
@@ -114,7 +121,7 @@
         <div class="darkBgSection">
             <section class="aboutUs darkBg">
                 <div class="content">
-                    <div>
+                    <div class="animate">
                         <h3>ABOUT US</h3>
                         <h2>Our Qualified Team is Ready to Help You!</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quis, reiciendis corporis
@@ -123,11 +130,16 @@
                         <button>About Us</button>
                     </div>
                 </div>
-                <div class="image"></div>
+                <div class="image">
+                    <div class="imageCover"></div>
+                </div>
+                <div class="aestheticElements animate">
+                    <img src="assets/decorations/aboutUs-1.svg">
+                </div>
             </section>
             <section class="whyUs darkBg">
                 <div class="content">
-                    <div>
+                    <div class="animate">
                         <h3>WHY US</h3>
                         <h2>Your Well-Being is our Main Priority.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quis, reiciendis corporis
@@ -136,17 +148,22 @@
                         <button>Why Us</button>
                     </div>
                 </div>
-                <div class="image"></div>
+                <div class="image">
+                    <div class="imageCover left"></div>
+                </div>
+                <div class="aestheticElements animate">
+                    <img src="assets/decorations/whyUs-1.svg">
+                </div>
             </section>
         </div>
-        <section class="services">
-            <div class="firstCont">
+        <section class="services animate">
+            <div class="firstCont animate excent">
                 <h4>OUR SERVICES</h4>
                 <h2>Specialties</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quasi quibusdam dicta asperiores
                     quod, fuga corrupti! Eveniet incidunt corporis ipsum!</p>
             </div>
-            <div class="secCont">
+            <div class="secCont card animate excent">
                 <div class="card">
                     <img src="assets/images/icons/bear.svg" alt="">
                     <div>
@@ -181,27 +198,30 @@
         </section>
         <section class="booking">
             <div class="firstCont">
-                <div>
+                <div class="animate">
                     <h4>BOOK AN APPOINTMENT</h4>
                     <h2>Our Medical Team is Ready to Help You.</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, hic ab non impedit laboriosam
                         reprehenderit voluptatum repellendus. Est, assumenda deleniti. Assumenda, aliquid!</p>
-                    <div>
+                    <div class="excent animate">
                         <button class="white">Contact Us</button>
-                        <button class="blue"><img src="assets/images/icons/phone.svg" alt="">(404) 850 - 7080</button>
+                        <button class="blue" id="lateButton"><img src="assets/images/icons/phone.svg" alt="">(404) 850 -
+                            7080</button>
                     </div>
                 </div>
             </div>
-            <div class="image"></div>
+            <div class="image">
+                <div class="imageCover"></div>
+            </div>
         </section>
         <section class="news">
-            <div class="firstCont">
+            <div class="firstCont animate">
                 <h4>RECENT NEWS</h4>
                 <h2>Our Latest Stories</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sapiente delectus adipisci sint nemo
                     amet, officia aut perferendis, unde fuga neque consectetur?</p>
             </div>
-            <div class="secCont">
+            <div class="secCont animate">
                 <div class="card">
                     <img class="header" src="assets/images/headerImg1.jpeg" alt="">
                     <div class="subCont">
@@ -211,7 +231,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad consequuntur maxime quas
                             natus nobis earum!
                         </p>
-                        <div class="readMore"><a href="">READ MORE</a><img src="assets/images/icons/arrow.svg" alt="">
+                        <div class="readMore"><a href="#">READ MORE</a><img src="assets/images/icons/arrow.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -224,7 +244,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad consequuntur maxime quas
                             natus nobis earum!
                         </p>
-                        <div class="readMore"><a href="">READ MORE</a><img src="assets/images/icons/arrow.svg" alt="">
+                        <div class="readMore"><a href="#">READ MORE</a><img src="assets/images/icons/arrow.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -237,14 +257,14 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad consequuntur maxime quas
                             natus nobis earum!
                         </p>
-                        <div class="readMore"><a href="">READ MORE</a><img src="assets/images/icons/arrow.svg" alt="">
+                        <div class="readMore"><a href="#">READ MORE</a><img src="assets/images/icons/arrow.svg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="contact">
-            <div class="firstCont">
+            <div class="firstCont animate">
                 <h3>How Can We Help?</h3>
                 <form action="">
                     <label for="name">What is your Name?</label>
@@ -260,13 +280,13 @@
                 </form>
             </div>
             <div class="secCont">
-                <div>
+                <div class="animate">
                     <h4>Need Some Help?</h4>
                     <div class="buttons">
                         <button class="blue"><img src="assets/images/icons/phone.svg" alt="">Call us Today</button>
                         <button class="white"><img src="assets/images/icons/mail.svg" alt="">Send Us a Email</button>
                     </div>
-                    <div class="places">
+                    <div class="places animate excent">
                         <h4>Visit Us</h4>
                         <div class="place">
                             <p class="title">LOS ANGELES</p>
@@ -274,7 +294,7 @@
                             <p>209 North Dunbar St. <br>
                                 Santa Monica, CA 90403.</p>
                         </div>
-                        <div class="place">
+                        <div class="place latePlace">
                             <p class="title">SAN FRANCISCO</p>
                             <p>+1 (414) 845 - 3697</p>
                             <p>58 Middle Point Rd. <br>
@@ -286,7 +306,7 @@
         </section>
     </main>
     <footer>
-        <div class="top">
+        <div class="top animate">
             <img src="assets/images/logo.svg" alt="">
             <ul>
                 <li><img src="assets/images/icons/facebook.svg" alt=""></li>
@@ -294,7 +314,7 @@
                 <li><img src="assets/images/icons/instagram.svg" alt=""></li>
             </ul>
         </div>
-        <div class="bot">
+        <div class="bot animate">
             <ul>
                 <li>
                     <h5>Menu</h5>
@@ -322,14 +342,5 @@
         </div>
     </footer>
 </body>
-
-<script>
-    const openButton = document.querySelector('.openButton');
-    openButton.parentNode.onclick = () => {
-        document.querySelector('.phoneNavBar').classList.toggle('opened');
-        openButton.classList.toggle('buttonClicked1');
-        openButton.classList.toggle('buttonClicked2');
-    }
-</script>
 
 </html>
